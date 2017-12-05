@@ -1,0 +1,40 @@
+var _user$project$Models$Model = F4(
+	function (a, b, c, d) {
+		return {result: a, count: b, marker: c, exchanges: d};
+	});
+var _user$project$Models$ExchangeItem = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return {base_amount: a, counter_amount: b, node_index: c, rate: d, buyer: e, executed_time: f, ledger_index: g, offer_sequence: h, seller: i, taker: j, tx_hash: k, tx_type: l, tx_index: m, base_currency: n, counter_currency: o, counter_issuer: p};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$SetRates = function (a) {
+	return {ctor: 'SetRates', _0: a};
+};
