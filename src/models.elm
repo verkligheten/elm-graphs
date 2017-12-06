@@ -10,25 +10,23 @@ type Msg
 type alias Model =
     { result : String
     , count : Int
-    , marker : String
     , exchanges : List ExchangeItem
     }
 
 
 type alias ExchangeItem =
-    { base_amount : String
-    , counter_amount : String
-    , node_index : Int
-    , rate : String
-    , buyer : String
-    , executed_time : String
-    , ledger_index : Int
-    , offer_sequence : Int
-    , seller : String
-    , taker : String
-    , tx_hash : String
-    , tx_type : String
-    , tx_index : Int
+    { base_volume : String
+    , buy_volume : Float
+    , close : String
+    , close_time : String
+    , count : Int
+    , counter_volume : String
+    , high : String
+    , low : String
+    , open : String
+    , open_time : String
+    , start : String
+    , vwap : String
     , base_currency : String
     , counter_currency : String
     , counter_issuer : String

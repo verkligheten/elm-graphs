@@ -9,9 +9,6 @@ import Updates exposing (update)
 import Views exposing (view)
 
 
--- MAIN --
-
-
 main : Program Never Model Msg
 main =
     Html.program
