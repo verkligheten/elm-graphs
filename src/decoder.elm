@@ -18,14 +18,21 @@ getRippleExchanges =
 decodeExchangeData : Json.Decode.Decoder Model
 decodeExchangeData =
     Pipeline.decode Model
+<<<<<<< HEAD
         |> Pipeline.required "result" Json.Decode.string
         |> Pipeline.required "count" Json.Decode.int
         |> Pipeline.required "exchanges" (Json.Decode.list decodeExchangeItem)
+=======
+      |> Pipeline.required "result" Json.Decode.string
+      |> Pipeline.required "count" Json.Decode.int
+      |> Pipeline.required "exchanges" (Json.Decode.list decodeExchangeItem)
+>>>>>>> 6476917f93d85d76138c3cd75e24b7b1a60d77e4
 
 
 decodeExchangeItem : Json.Decode.Decoder ExchangeItem
 decodeExchangeItem =
     Pipeline.decode ExchangeItem
+<<<<<<< HEAD
         |> Pipeline.required "base_volume" Json.Decode.string
         |> Pipeline.required "buy_volume" Json.Decode.float
         |> Pipeline.required "close" Json.Decode.string
@@ -41,3 +48,20 @@ decodeExchangeItem =
         |> Pipeline.required "base_currency" Json.Decode.string
         |> Pipeline.required "counter_currency" Json.Decode.string
         |> Pipeline.required "counter_issuer" Json.Decode.string
+=======
+      |> Pipeline.required "base_volume" (Json.Decode.string)
+      |> Pipeline.required "buy_volume" (Json.Decode.float)
+      |> Pipeline.required "close" (Json.Decode.string)
+      |> Pipeline.required "close_time" (Json.Decode.string)
+      |> Pipeline.required "count" (Json.Decode.int)
+      |> Pipeline.required "counter_volume" (Json.Decode.string)
+      |> Pipeline.required "high" (Json.Decode.string)
+      |> Pipeline.required "low" (Json.Decode.string)
+      |> Pipeline.required "open" (Json.Decode.string)
+      |> Pipeline.required "open_time" (Json.Decode.string)
+      |> Pipeline.required "start" (Json.Decode.string)
+      |> Pipeline.required "vwap" (Json.Decode.string)
+      |> Pipeline.required "base_currency" (Json.Decode.string)
+      |> Pipeline.required "counter_currency" (Json.Decode.string)
+      |> Pipeline.required "counter_issuer" (Json.Decode.string)
+>>>>>>> 6476917f93d85d76138c3cd75e24b7b1a60d77e4
