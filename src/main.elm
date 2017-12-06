@@ -1,10 +1,10 @@
 module Main exposing (..)
 
 -- import String
+-- import Init exposing (init)
 
 import Html exposing (..)
-import Init exposing (init)
-import Models exposing (ExchangeItem, Model, Msg)
+import Models exposing (..)
 import Updates exposing (update)
 import Views exposing (view)
 
