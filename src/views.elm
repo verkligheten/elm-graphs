@@ -15,17 +15,17 @@ import Visualization.Scale as Scale exposing (BandConfig, BandScale, ContinuousS
 
 w : Float
 w =
-    1200
+    1600
 
 
 h : Float
 h =
-    450
+    750
 
 
 padding : Float
 padding =
-    30
+    50
 
 
 xScale : List ( Date, Float ) -> BandScale Date
@@ -35,12 +35,12 @@ xScale model =
 
 yScale : ContinuousScale
 yScale =
-    Scale.linear ( 0.2, 0.3 ) ( h - 2 * padding, 0 )
+    Scale.linear ( 0.23, 0.25 ) ( h - 2 * padding, 0 )
 
 
 xAxis : List ( Date, Float ) -> Svg msg
 xAxis model =
-    Axis.axis { defaultOptions | orientation = Axis.Bottom, tickFormat = Just (Date.toFormattedString "dd MMM") } (Scale.toRenderable (xScale model))
+    Axis.axis { defaultOptions | orientation = Axis.Bottom, tickFormat = Just (Date.toFormattedString "dd") } (Scale.toRenderable (xScale model))
 
 
 yAxis : Svg msg

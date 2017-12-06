@@ -7,7 +7,11 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         SetRates (Ok res) ->
-            { model | exchanges = res.exchanges } ! []
+            { model
+                | exchanges = res.exchanges
+                , result = "success"
+            }
+                ! []
 
         SetRates (Err err) ->
             { model | result = toString err } ! []
